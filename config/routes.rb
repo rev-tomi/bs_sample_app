@@ -1,7 +1,7 @@
 BsSampleApp::Application.routes.draw do
-  get "favorite_pets/fish"
-  get "favorite_pets/cats"
-  get "favorite_pets/dogs"
+  match '/fish', to: 'favorite_pets#fish',  via: 'get'
+  match '/cats', to: 'favorite_pets#cats',  via: 'get'
+  match '/dogs', to: 'favorite_pets#dogs',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
