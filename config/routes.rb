@@ -1,4 +1,7 @@
 BsSampleApp::Application.routes.draw do
+  get "favorite_pets/fish"
+  get "favorite_pets/cats"
+  get "favorite_pets/dogs"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
