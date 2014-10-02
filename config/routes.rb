@@ -1,4 +1,8 @@
 BsSampleApp::Application.routes.draw do
+  get "dynamic_pets/main"
+  get "dynamic_pets/fish"
+  get "dynamic_pets/cat"
+  get "dynamic_pets/dog"
   match '/fish', to: 'favorite_pets#fish',  via: 'get'
   match '/cats', to: 'favorite_pets#cats',  via: 'get'
   match '/dogs', to: 'favorite_pets#dogs',   via: 'get'
