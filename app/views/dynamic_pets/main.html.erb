@@ -5,8 +5,25 @@
     </div>
 <script language="javascript">
 $(document).ready(function() {
+
+  var navigator = function(key) {
+    var navbarSelector = function(element, key) {
+      var jElement = $(element);
+      var parent = jElement.parent();
+      if (jElement.attr('id') === key) {
+        jElement.parent().addClass('active');
+      } else {
+        jElement.parent().removeClass('active');
+      }
+    };
+    
+    $('.navbar-nav a').each(function(index, element) {
+      navbarSelector(element, key);
+    });
+  };
+
   $('.navbar-nav a').on('click', function(event) {
-    alert($(this).attr('id'));
+    navigator($(this).attr('id'));
     event.preventDefault();
   });
 });
