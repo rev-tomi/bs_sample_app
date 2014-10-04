@@ -5,5 +5,9 @@
     </div>
 <script language="javascript">
 $(document).ready(function() {
+  $('.navbar-nav a').on('click', function(event) {
+    alert($(this).attr('id'));
+    event.preventDefault();
+  });
 });
 </script>
