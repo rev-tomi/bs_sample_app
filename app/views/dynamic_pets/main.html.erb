@@ -1,7 +1,7 @@
     <!-- Fixed navbar -->
     <%= render partial: 'common/navbar', locals: {item: ''} %>
     
-    <div class="jumbotron">
+    <div class="container" id="jumbo-content">
     </div>
 <script language="javascript">
 $(document).ready(function() {
@@ -17,13 +17,13 @@ $(document).ready(function() {
       }
     };
     
-    var jumbotronLoader = function(key) {
-      $(".jumbotron").load('/dyn_' + key);
+    var containerLoader = function(key) {
+      $("#jumbo-content").load('/dyn_' + key);
     }
     
     $('.navbar-nav a').each(function(index, element) {
       navbarSelector(element, key);
-      jumbotronLoader(key);
+      containerLoader(key);
     });
   };
 
