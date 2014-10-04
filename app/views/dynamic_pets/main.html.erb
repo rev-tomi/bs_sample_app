@@ -17,8 +17,13 @@ $(document).ready(function() {
       }
     };
     
+    var jumbotronLoader = function(key) {
+      $(".jumbotron").load('/dyn_' + key);
+    }
+    
     $('.navbar-nav a').each(function(index, element) {
       navbarSelector(element, key);
+      jumbotronLoader(key);
     });
   };
 
