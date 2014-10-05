@@ -13,7 +13,7 @@ $(document).ready(function() {
     
     var containerLoader = function(key) {
       $("#jumbo-content").load('/dyn_' + key);
-    }
+    };
     
     $('.navbar-nav a').each(function(index, element) {
       navbarSelector(element, key);
